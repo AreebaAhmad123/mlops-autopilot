@@ -1,16 +1,9 @@
-# Python
 __pycache__/
 *.pyc
 .venv/
 env/
- 
-# Data 
-src/data/*.csv
-models/
- 
-# n8n
-n8n/
 node_modules/
- 
-# Docker
+models/
 *.log
+.env
+n8n/

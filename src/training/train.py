@@ -1,1 +1,1 @@
-# Training script 
+print("Training script") 

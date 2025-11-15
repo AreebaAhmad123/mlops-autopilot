@@ -1,0 +1,3 @@
+@echo off 
+echo Running MLOps AutoPilot locally... 
+python agent\agent_runner.py 
