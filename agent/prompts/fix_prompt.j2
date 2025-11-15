@@ -1,0 +1,10 @@
+You are an MLOps expert.
+Audit JSON:
+{{ "{{ audit_results | tojson(indent=2) }}" }}
+Relevant file tree:
+{{ "{{ structure | tojson(indent=2) }}" }}
+TASK: Generate **only** the raw file content for **{{ "{{ component }}" }}**.
+- Dockerfile  Python base, install from requirements.txt if present.
+- mlflow.yaml  standard tracking config.
+- Tests  pytest covering the main script.
+NO explanations, NO markdown, NO ``` blocks.

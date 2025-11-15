@@ -1,0 +1,12 @@
+{
+  "task": "binary_classification",
+  "model": "LogisticRegression",
+  "features": [
+    "age",
+    "income"
+  ],
+  "target": "purchased",
+  "hyperparams": {
+    "C": 1.0
+  }
+}

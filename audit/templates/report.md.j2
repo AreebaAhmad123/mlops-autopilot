@@ -1,0 +1,23 @@
+# MLOps Audit Report: {{ repo_name }}
+
+**Score**: `{{ score }}%` ({{ total }} / {{ max_score }})  
+**Generated**: November 15, 2025  
+**Auditor**: MLOps Autopilot v1.0
+
+---
+
+## MLOps Maturity Checks
+
+| Component | Status | Score | Sample Files |
+|---------|--------|-------|-------------|
+{% for check in checks %}
+| {{ check.check }} | {% if check.passed %}PASS{% else %}FAIL{% endif %} | {{ check.score }}/{{ check.weight }} | {{ check.files|join(', ') or 'None' }} |
+{% endfor %}
+
+---
+
+**Recommendation**:  
+{% if score >= 80 %}Excellent!  
+{% elif score >= 60 %}Add Docker & MLflow  
+{% elif score >= 40 %}Add CI/CD & tests  
+{% else %}Start with Dockerfile & tests{% endif %}
