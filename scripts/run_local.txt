@@ -1,0 +1,16 @@
+mkdir -p scripts
+cat > scripts/run_local.sh << 'EOF'
+#!/bin/bash
+set -e
+
+echo "Starting MLOps AutoPilot in local mode..."
+
+# Activate virtual env (optional)
+# source venv/bin/activate
+
+# Run agent
+python agent/agent_runner.py --mode plan-and-train
+
+echo "Run complete."
+EOF
+chmod +x scripts/run_local.sh

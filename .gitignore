@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+
+# Virtual Environment
+.env
+.env.local
+
+# ML Models & Data
+models/*.pkl
+models/*.h5
+models/*.pth
+models/*.onnx
+data/*.csv
+data/*.parquet
+data/*.jsonl
+data/raw/
+data/processed/
+
+# n8n
+n8n/
+node_modules/
+n8n-data/
+
+# Docker
+docker-compose.override.yml
+
+# Logs & Outputs
+*.log
+logs/
+output/
+temp/
+tmp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
