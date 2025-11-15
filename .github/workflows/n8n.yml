@@ -1,0 +1,18 @@
+name: Trigger N8N Webhook 
+on: [push] 
+ 
+jobs: 
+  trigger-n8n: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Send to N8N 
+          curl -X POST \ 
+            -H "Content-Type: application/json" \ 
+            -d '{ 
+              "repository": { 
+                "clone_url": "${{ github.event.repository.clone_url }}", 
+                "full_name": "${{ github.repository }}" 
+              }, 
+              "ref": "${{ github.ref }}" 
+            }' \ 
+            ${{ secrets.N8N_WEBHOOK_URL }} 
